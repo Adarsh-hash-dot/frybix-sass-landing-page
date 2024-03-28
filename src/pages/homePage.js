@@ -1,16 +1,14 @@
+import React from "react";
 import {
   Navbar,
   HomeBackground,
   IntroSection,
   TheyTrust,
   OnePlatform,
-  AbilityToServe,
   WhatClientThink,
-  TryFrybix,
-  Footer,
 } from "./components/homepage";
 
-function App() {
+const homePage = () => {
   return (
     <div className="overflow-hidden font-secondary">
       <HomeBackground></HomeBackground>
@@ -18,12 +16,8 @@ function App() {
       <IntroSection></IntroSection>
       <TheyTrust></TheyTrust>
       <OnePlatform></OnePlatform>
-      <AbilityToServe></AbilityToServe>
-      <WhatClientThink></WhatClientThink>
-      <TryFrybix></TryFrybix>
-      <Footer></Footer>
     </div>
   );
-}
+};
 
-export default App;
+export default homePage;
