@@ -5,8 +5,11 @@ import {
   IntroSection,
   TheyTrust,
   OnePlatform,
+  AbilityToServe,
   WhatClientThink,
-} from "./components/homepage";
+  TryFrybix,
+  Footer,
+} from "./../components/homepage";
 
 const homePage = () => {
   return (
@@ -16,6 +19,10 @@ const homePage = () => {
       <IntroSection></IntroSection>
       <TheyTrust></TheyTrust>
       <OnePlatform></OnePlatform>
+      <AbilityToServe></AbilityToServe>
+      <WhatClientThink></WhatClientThink>
+      <TryFrybix></TryFrybix>
+      <Footer></Footer>
     </div>
   );
 };

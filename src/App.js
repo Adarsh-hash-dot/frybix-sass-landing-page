@@ -1,28 +1,14 @@
-import {
-  Navbar,
-  HomeBackground,
-  IntroSection,
-  TheyTrust,
-  OnePlatform,
-  AbilityToServe,
-  WhatClientThink,
-  TryFrybix,
-  Footer,
-} from "./components/homepage";
+import "animate.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { homePage } from "./pages";
 
 function App() {
   return (
-    <div className="overflow-hidden font-secondary">
-      <HomeBackground></HomeBackground>
-      <Navbar></Navbar>
-      <IntroSection></IntroSection>
-      <TheyTrust></TheyTrust>
-      <OnePlatform></OnePlatform>
-      <AbilityToServe></AbilityToServe>
-      <WhatClientThink></WhatClientThink>
-      <TryFrybix></TryFrybix>
-      <Footer></Footer>
-    </div>
+    <Router basename="/">
+      <Routes>
+        <Route path="/" Component={homePage} />
+      </Routes>
+    </Router>
   );
 }
 
