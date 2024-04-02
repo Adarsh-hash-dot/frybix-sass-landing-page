@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { logo } from "./../../assets";
-
 const Navbar = () => {
   return (
-    <nav className="flex justify-between py-7 container mx-auto px-4">
+    <nav className="flex justify-between py-7 container mx-auto px-4 ">
       <div className="cursor-pointer">
         {/* <Link href="/" className=""> */}
         <img src={logo} className="w-32 h-10" alt="" />
@@ -14,9 +13,9 @@ const Navbar = () => {
         <ul className="flex justify-center items-center text-primary lg:text-white cursor-pointer">
           {["Home", "About Us", "Pricing", "Contact Us"].map((item) => {
             return (
-              <li>
+              <li key={item}>
                 <Link
-                  className="font-secondary first:pr-4 px-4"
+                  className="font-secondary first:pr-4 px-4 "
                   href="/"
                   rel="noopener noreferrer"
                 >

@@ -12,7 +12,7 @@ const TheyTrust = () => {
             className="w-[77px] h-[13px] mt-[7px] ml-3"
             src={stars}
             alt=""
-            srcset=""
+            srcSet=""
           />
         </p>
         <SectionHeading
@@ -22,17 +22,18 @@ const TheyTrust = () => {
           isCenter={true}
         ></SectionHeading>
         <div className="mt-10 flex flex-wrap justify-center">
-          {Array.from({ length: 13 }, (_, index) => (
+          {Array.from({ length: 12 }, (_, index) => (
             <span
+              key={index}
               className={`p-5 lg:p-10 rounded-full ${
                 index % 2 === 0 && "client-shadow"
-              } w-[120px] h-[80px] lg:w-[200px] lg:h-[120px] grid place-items-center m-4 lg:m-7 bg-white`}
+              } w-[120px] h-[80px] lg:w-[200px] lg:h-[120px] grid place-items-center m-4 lg:m-7 bg-white hover:client-shadow`}
             >
               <img
                 className=""
                 src={`/assets/clients/${index + 1}.png`}
                 alt=""
-                srcset=""
+                srcSet=""
               />
             </span>
           ))}

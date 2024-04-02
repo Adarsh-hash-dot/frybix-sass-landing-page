@@ -20,7 +20,7 @@ const WhatClientThink = () => {
             className="w-[77px] h-[13px] mt-[7px] ml-3"
             src={stars}
             alt=""
-            srcset=""
+            srcSet=""
           />
         </p>
       </div>
@@ -36,37 +36,37 @@ const WhatClientThink = () => {
           className="absolute top-[10vw] left-[20vw] lg:top-[32%] lg:left-[32%] -z-0 w-[7vw] h-[7vw] lg:w-auto lg:h-auto"
           src={person1}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <img
           className="absolute top-[18vw] left-[40vw]  lg:top-[23%] lg:left-[42%] -z-0 w-[7vw] h-[7vw] v lg:w-auto lg:h-auto"
           src={person2}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <img
           className="absolute top-[5vw] left-[60vw]  lg:top-[30%] lg:left-[65%] w-[7vw] h-[7vw] lg:w-auto lg:h-auto"
           src={person3}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <img
           className="absolute top-[30vw] left-[70vw] lg:top-[60%] lg:left-[75%] w-[7vw] h-[7vw] lg:w-auto lg:h-auto"
           src={person4}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <img
           className="absolute right-[6vw] -z-50"
           src={map}
           alt=""
-          srcset=""
+          srcSet=""
         />
         <img
           className="absolute top-[20vw] left-[10vw] lg:top-1/4 lg:left-1/4 -z-40 w-2/3 md:w-1/2 lg:w-auto"
           src={girlTaking}
           alt=""
-          srcset=""
+          srcSet=""
         />
       </div>
     </div>

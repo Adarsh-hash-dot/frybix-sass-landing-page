@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="grid place-items-center mt-28">
       <div className="container bg-white grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-4 font-medium p-4">
-        <div class="footer-column">
+        <div className="footer-column">
           <div className="cursor-pointer flex">
             {/* <Link href="/" className=""> */}
             <img src={logoName} className="w-32 h-10" alt="" />
@@ -13,21 +13,21 @@ const Footer = () => {
           </div>
           <ul>
             <li className="my-3">
-              <img src="" alt="" srcset="" /> help@frybix.com
+              <img src="" alt="" srcSet="" /> help@frybix.com
             </li>
             <li className="my-3">
               <img src="" alt="" /> +1 234 456 678 89
             </li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h5 className="text-3xl font-primary font-semibold capitalize">
             {" "}
             Links{" "}
           </h5>
           <ul>
             <li className="my-3">
-              <img src="" alt="" srcset="" /> Home
+              <img src="" alt="" srcSet="" /> Home
             </li>
             <li className="my-3">
               <img src="" alt="" /> About Us
@@ -40,7 +40,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h5 className="text-3xl font-primary font-semibold capitalize">
             {" "}
             legal{" "}
@@ -51,7 +51,7 @@ const Footer = () => {
             <li className="my-3">Cookie policy</li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h5 className="text-3xl font-primary font-semibold capitalize">
             {" "}
             product{" "}
@@ -62,7 +62,7 @@ const Footer = () => {
             <li className="my-3">Reveiws</li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h5 className="text-3xl font-primary font-semibold capitalize">
             {" "}
             Newsletter{" "}

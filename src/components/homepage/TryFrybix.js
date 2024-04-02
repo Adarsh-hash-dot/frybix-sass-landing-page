@@ -14,25 +14,25 @@ const TryFrybix = () => {
         className="absolute right-0 bottom-0 w-[166px] lg:w-auto"
         src={orangeAngle1}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="absolute right-0 bottom-0 w-[82px] lg:w-auto"
         src={orangeAngle2}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="absolute left-0 top-0 w-[181px] lg:w-auto"
         src={voiletAngle1}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <img
         className="absolute left-0 top-0 w-[85px] lg:w-auto"
         src={voiletAngle2}
         alt=""
-        srcset=""
+        srcSet=""
       />
       <div className="w-full h-full grid place-items-center">
         <div className="flex flex-col items-center z-10">
@@ -47,7 +47,7 @@ const TryFrybix = () => {
           </p>
           <button className="flex border-2 border-black rounded-full px-16 py-3 lg:px-24 lg:py-5 mt-5">
             Get Frybix App{" "}
-            <img src="/assets/icons/dropdown.png" alt="" srcset="" />
+            <img src="/assets/icons/dropdown.png" alt="" srcSet="" />
           </button>
         </div>
       </div>

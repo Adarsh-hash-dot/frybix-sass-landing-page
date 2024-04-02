@@ -20,16 +20,23 @@
   font-weight: <weight>;
   font-style: normal;
 } */
+@layer utilities {
+  .client-shadow {
+    box-shadow: 0px 54.47927474975586px 64.09326171875px 0px
+      rgba(205, 205, 205, 0.29);
+  }
+
+  .feature-shadow {
+    box-shadow: 0px 54.47927474975586px 64.09326171875px 0px #6640ff29;
+  }
+
+  .client-shadow-hover {
+    box-shadow: 5px 74.47927474975586px 84.09326171875px 10px;
+    cursor: pointer;
+    border: #6640ff29;
+  }
+}
 
 body {
   margin: 0;
-}
-
-.client-shadow {
-  box-shadow: 0px 54.47927474975586px 64.09326171875px 0px
-    rgba(205, 205, 205, 0.29);
-}
-
-.feature-shadow {
-  box-shadow: 0px 54.47927474975586px 64.09326171875px 0px #6640ff29;
 }

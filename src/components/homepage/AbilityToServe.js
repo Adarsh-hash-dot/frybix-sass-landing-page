@@ -45,13 +45,16 @@ const AbilityToServe = () => {
         ></SectionHeading>
         <div className="flex flex-wrap justify-around mt-24">
           {abilities.map((item, index) => (
-            <span className="lg:w-[480px] flex p-4 m-4 client-shadow bg-white rounded-3xl">
+            <span
+              key={index}
+              className="lg:w-[480px] flex p-4 m-4 client-shadow bg-white rounded-3xl"
+            >
               <span className="px-5">
                 <img
                   className="min-w-12 h-12"
                   src={`/assets/icons/ablity${1 + index}.png`}
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
               </span>
 
