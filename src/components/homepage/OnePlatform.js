@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   earning,
   manage_online,
@@ -71,45 +71,46 @@ const Platform = () => {
     },
   ];
 
-  const [isAnimationVisible, setIsAnimationVisible] = useState([]);
-  const elementRefs = useRef([]);
+  //section reveal
+  const componentRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setIsAnimationVisible((prev) => [
-              ...prev.slice(0, index),
-              true,
-              ...prev.slice(index + 1),
-            ]);
-            observer.unobserve(entry.target); // Stop observing once element is visible
-          }
-        });
+      ([entry]) => {
+        // If the component is intersecting the viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       },
-      { threshold: 0 }
-    ); // Trigger when 50% of the element is visible
+      { threshold: 0.1 }
+    ); // Trigger when 50% of the component is visible
 
-    const currentRefs = elementRefs.current; // Capture the current value of refs
+    const currentRef = componentRef.current;
 
-    currentRefs.forEach((ref) => {
-      if (ref) {
-        observer.observe(ref);
-      }
-    });
+    if (currentRef) {
+      console.log("observing");
+      observer.observe(componentRef.current);
+    } else {
+      console.log("not console.log(observing);");
+    }
 
     return () => {
-      currentRefs.forEach((ref) => {
-        if (ref) {
-          observer.unobserve(ref); // Cleanup when component unmounts
-        }
-      });
+      if (currentRef) {
+        observer.unobserve(currentRef); // Cleanup when component unmounts
+      }
     };
   }, []);
 
   return (
-    <div className="flex justify-center mt-8">
+    <div
+      ref={componentRef}
+      className={`flex justify-center mt-8 transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      } `}
+    >
       <div className="container">
         <div className="mt-12 max-w-[1800px] ">
           <SectionHeading
@@ -126,7 +127,7 @@ const Platform = () => {
                     key={index}
                     className={`flex ${
                       index === 0 && "client-shadow"
-                    } p-4 max-w-[500px] rounded-3xl mb-8`}
+                    } p-4 max-w-[500px] rounded-3xl mb-8 hover:scale-110 transition-all duration-150 hover:client-shadow`}
                   >
                     <span className="p-4 pt-0">
                       <img
@@ -178,10 +179,7 @@ const Platform = () => {
                   } `}
                 >
                   <div
-                    ref={(element) => (elementRefs.current[index] = element)}
-                    className={`md:w-6/12 p-10 lg:pr-48 text-left  animate__animated ${
-                      isAnimationVisible[index] ? "animate__fadeInLeft" : ""
-                    } animation-delay-2s`}
+                    className={`md:w-6/12 p-10 lg:pr-48 text-left  animate__animated animation-delay-2s`}
                   >
                     <SectionHeading
                       first={item.first}

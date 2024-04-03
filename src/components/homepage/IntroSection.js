@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   dashboard,
@@ -11,8 +11,42 @@ import {
 import "animate.css";
 
 const IntroSection = () => {
+  const componentRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the component is intersecting the viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.5 }
+    ); // Trigger when 50% of the component is visible
+
+    const currentRef = componentRef.current;
+
+    if (currentRef) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef); // Cleanup when component unmounts
+      }
+    };
+  }, []);
+
   return (
-    <div className="lg:flex container mx-auto px-4 ">
+    <div
+      ref={componentRef}
+      className={`lg:flex container mx-auto px-4 transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      } `}
+    >
       <div className="lg:w-6/12">
         <h1 className="font-primary text-3xl md:text-5xl lg:text-7xl font-semibold  mt-24 lg:pr-72">
           Simplified productivity app for all.
@@ -27,7 +61,7 @@ const IntroSection = () => {
             type="text"
             defaultValue={"connect@frybix.com"}
           />
-          <button className="bg-primary w-16 h-16 grid place-items-center ml-6 rounded-full">
+          <button className="bg-primary w-16 h-16 grid place-items-center ml-6 rounded-full hover:scale-105 transition-all duration-150">
             <img src={arrowImg} alt="" srcSet="" />
           </button>
         </div>

@@ -13,9 +13,9 @@ const Navbar = () => {
         <ul className="flex justify-center items-center text-primary lg:text-white cursor-pointer">
           {["Home", "About Us", "Pricing", "Contact Us"].map((item) => {
             return (
-              <li key={item}>
+              <li key={item} className="relative">
                 <Link
-                  className="font-secondary first:pr-4 px-4 "
+                  className="font-secondary first:pr-4 px-4 relative transition-all duration-300s"
                   href="/"
                   rel="noopener noreferrer"
                 >
@@ -25,7 +25,7 @@ const Navbar = () => {
             );
           })}
           <li>
-            <button className="bg-primary text-white lg:bg-white lg:text-primary font-bold px-10 py-4 rounded-full mx-4">
+            <button className="bg-primary text-white lg:bg-white lg:text-primary font-bold px-10 py-4 rounded-full mx-4 hover:scale-105 transition-all duration-300">
               Sign In
             </button>
           </li>

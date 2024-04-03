@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { SectionHeading } from "../utility";
 
 const AbilityToServe = () => {
@@ -35,8 +35,45 @@ const AbilityToServe = () => {
     },
   ];
 
+  const componentRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // If the component is intersecting the viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    ); // Trigger when 50% of the component is visible
+
+    const currentRef = componentRef.current;
+
+    if (currentRef) {
+      console.log("observing");
+      observer.observe(componentRef.current);
+    } else {
+      console.log("not console.log(observing);");
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef); // Cleanup when component unmounts
+      }
+    };
+  }, []);
+
   return (
-    <div className="grid place-items-center">
+    <div
+      ref={componentRef}
+      className={`grid place-items-center transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="container">
         <SectionHeading
           first={"Frybix has the ability to serve any \n"}
