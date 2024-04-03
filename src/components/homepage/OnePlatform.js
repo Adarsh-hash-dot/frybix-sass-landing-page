@@ -12,17 +12,17 @@ const Platform = () => {
     {
       title: "appointments",
       discription:
-        "Many desktop publishing packages and web page editors now use for them.",
+        "Easily schedule, reschedule, and manage appointments with ease and efficiency.",
     },
     {
       title: "class bookings",
       discription:
-        "Many desktop publishing packages and web page editors now use for them.",
+        "Effortlessly coordinate and manage class schedules for seamless organization and participation.",
     },
     {
       title: "fast support",
       discription:
-        "Many desktop publishing packages and web page editors now use for them.",
+        "Receive quick and reliable assistance from our dedicated team, ensuring minimal disruption and maximum satisfaction.",
     },
   ];
 
@@ -50,7 +50,7 @@ const Platform = () => {
       last: "easily.",
       highlighted: " online ",
       discription:
-        "Pellentesque blandit augue facilisis malesuada interdum eleifend risus, commodo. Egestas senectus vehicula vel consectetur eu. Sit pulvinar urna diam lacus fringilla eu cursus.",
+        "Organize your tasks effortlessly with our intuitive online task management system, ensuring efficient productivity and seamless collaboration. Stay on top of your to-do list with ease and streamline your workflow for maximum efficiency.",
       image: manage_online,
     },
     {
@@ -58,7 +58,7 @@ const Platform = () => {
       last: "of all your progress.",
       highlighted: " Track ",
       discription:
-        "Pellentesque blandit augue facilisis malesuada interdum eleifend risus, commodo. Egestas senectus vehicula vel consectetur eu. Sit pulvinar urna diam lacus fringilla eu cursus.",
+        "Monitor your progress comprehensively with our advanced tracking system, allowing you to analyze your performance, set goals, and track your achievements with ease. Stay informed about your progress in real-time and make informed decisions to reach your objectives efficiently.",
       image: track_progress,
     },
     {
@@ -66,7 +66,7 @@ const Platform = () => {
       last: ", no more cancellations",
       highlighted: " connections ",
       discription:
-        "Pellentesque blandit augue facilisis malesuada interdum eleifend risus, commodo. Egestas senectus vehicula vel consectetur eu. Sit pulvinar urna diam lacus fringilla eu cursus.",
+        "Expand your network effortlessly and eliminate cancellations with our seamless connectivity solutions, ensuring uninterrupted communication and collaboration. Strengthen your connections and minimize disruptions to achieve your goals effectively.",
       image: connections,
     },
   ];

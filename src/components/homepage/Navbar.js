@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { logo } from "./../../assets";
+import { logoName } from "./../../assets";
 const Navbar = () => {
   return (
     <nav className="flex justify-between py-7 container mx-auto px-4 ">
       <div className="cursor-pointer">
         {/* <Link href="/" className=""> */}
-        <img src={logo} className="w-32 h-10" alt="" />
+        <img src={logoName} className="w-32 h-10" alt="" />
         {/* </Link> */}
       </div>
       <div className="tailwind-class hidden md:inline-block">
@@ -15,7 +15,7 @@ const Navbar = () => {
             return (
               <li key={item} className="relative">
                 <Link
-                  className="font-secondary first:pr-4 px-4 relative transition-all duration-300s"
+                  className="font-secondary first:pr-4 px-4 relative transition-all duration-75 pb-3 hover:border-b-2 border-primary lg:border-white"
                   href="/"
                   rel="noopener noreferrer"
                 >

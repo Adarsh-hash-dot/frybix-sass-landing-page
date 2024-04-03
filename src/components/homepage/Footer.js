@@ -15,7 +15,7 @@ const Footer = () => {
           setIsVisible(false);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     ); // Trigger when 50% of the component is visible
 
     const currentRef = componentRef.current;
